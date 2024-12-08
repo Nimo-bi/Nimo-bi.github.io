@@ -58,15 +58,53 @@
             color: #0056b3;
         }
 
-        .property-tile {
-            border: 1px solid #ddd;
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .overlay-content {
+            background: white;
+            padding: 20px;
+            text-align: center;
             border-radius: 5px;
-            padding: 15px;
-            margin: 10px;
-            display: inline-block;
-            width: 30%;
-            box-sizing: border-box;
-            text-align: left;
+            width: 80%;
+            max-width: 400px;
+        }
+
+        .confirm-button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .confirm-button:hover {
+            background-color: #218838;
+        }
+
+        .close-button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .close-button:hover {
+            background-color: #c82333;
         }
     </style>
     <script>
@@ -74,56 +112,10 @@
             const iframe = document.getElementById('propertyMap');
             iframe.style.display = iframe.style.display === 'block' ? 'none' : 'block';
         }
-    </script>
-</head>
-<body>
-    <!-- Landing Section -->
-    <header>
-        <h1>Welcome to Johor Bahru RTS Latest Project</h1>
-        <p>Be ready for the launch of SG/JB RTS. Grab the chance to be part of the next JB's investment hot topic.</p>
-        <img src="./project-image.gif" alt="Project Image" style="width:100%; max-width:600px;">
-        <!--<video src="project-video.mp4" controls style="width:100%; max-width:600px;"></video>-->
-    </header>
 
-    <!-- Project Details Section -->
-    <section id="details">
-        <h2>About the Project</h2>
-        <p><strong> Starting at RM490k/$150k</strong></p>
-        <p><strong>Purpose:</strong> Tier 1 Investment Project or Ownstay Suitable</p>
-        <p><strong>Size & Layouts:</strong> Up to 4 Bedrooms, 497sqft - 1169sqft</p>
-        <p><strong>Landmark/Location:</strong> Bukit Chagar, Opposite Johor Bahru Checkpoint (CIQ) </p>
-        <br><br>
-        <p>Benefits</p>
-        <button class="cta-button">Book Now for Appointment</button>
-        <button class="download-button">Download Brochure</button>
-    </section>
+        function showOverlay() {
+            document.getElementById('overlay').style.display = 'flex';
+        }
 
-    <!-- Explore Section -->
-    <section>
-        <h2>Explore the Area</h2>
-        <a onclick="toggleIframe()">Explore</a>
-        <iframe id="propertyMap" src="https://www.google.com/maps/d/u/3/embed?mid=1KT5KUnQ-PQndrHfXW2Hdc0rL1l_LAss&ehbc=2E312F"></iframe>
-    </section>
-
-    <!-- Other Properties Section
-    <section id="other-properties">
-        <h2>Other Properties</h2>
-        <div class="property-tile">
-            <h4>[Property Name 1]</h4>
-            <p><strong>Area:</strong> [Area]</p>
-            <p><strong>Purpose:</strong> [Purpose]</p>
-            <p><strong>Price:</strong> $[Price]</p>
-            <p><strong>Size & Layout:</strong> [Details]</p>
-            <p><strong>Benefit:</strong> [Key Benefit]</p>
-            <button class="download-button">Download Brochure</button>
-        </div>
-    </section>-->
-
-    <!-- Contact Section -->
-    <footer>
-        <h2>Contact Us</h2>
-        <p>Have questions? Get in touch with us!</p>
-        <button class="contact-button">Contact Us</button>
-    </footer>
-</body>
-</html>
+        function confirmWhatsAppLink() {
+            window.location.href = "https://api.whatsapp.com/send/?phone=60142976513&text=Please+send+me+brochure+for+%22Johor_
