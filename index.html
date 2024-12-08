@@ -13,6 +13,7 @@
 
     html, body {
       height: 100%;
+      font-family: Arial, sans-serif;
     }
 
     h1 {
@@ -28,15 +29,50 @@
       border: none;
     }
 
+    .link-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .secure-link {
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .secure-link:hover {
+      background-color: #0056b3;
+    }
+
     @media (max-width: 768px) {
       h1 {
         font-size: 1.2em;
       }
     }
   </style>
+  <script>
+  function redirectToTestingPage() {
+    const password = prompt("Enter the password to access the Testing Page:");
+    const correctPassword = "123Test"; // Replace with your desired password
+
+    if (password === correctPassword) {
+      window.location.href = "./testing-page.html"; // Relative path to the testing page
+    } else if (password !== null) {
+      alert("Incorrect password. Access denied.");
+    }
+  }
+</script>
+
 </head>
 <body>
   <h1>Available KL City Property</h1>
   <iframe src="https://www.google.com/maps/d/u/3/embed?mid=1KT5KUnQ-PQndrHfXW2Hdc0rL1l_LAss&ehbc=2E312F"></iframe>
+  
+  <div class="link-container">
+    <button class="secure-link" onclick="redirectToTestingPage()">Go to Testing Page</button>
+  </div>
 </body>
 </html>
