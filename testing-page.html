@@ -113,8 +113,11 @@
             iframe.style.display = iframe.style.display === 'block' ? 'none' : 'block';
         }
 
-        function showOverlay() {
-            document.getElementById('overlay').style.display = 'flex';
+        function showApptOverlay() {
+            document.getElementById('cta_overlay').style.display = 'flex';
+        }
+        function showBrochureOverlay() {
+            document.getElementById('brochure_overlay').style.display = 'flex';
         }
 
         function confirmWhatsAppLink() {
@@ -150,8 +153,8 @@
         <p><strong>Size & Layouts:</strong> Up to 4 Bedrooms, 497sqft - 1169sqft</p>
         <p><strong>Landmark/Location:</strong> Bukit Chagar, Opposite Johor Bahru Checkpoint (CIQ)</p>
         <br><br>
-        <button class="cta-button" onclick="showOverlay()">Book Now for Appointment</button>
-        <button class="download-button" onclick="showOverlay()">Download Brochure</button>
+        <button class="cta-button" onclick="showApptOverlay()">Book Now for Appointment</button>
+        <button class="download-button" onclick="showBrochureOverlay()">Download Brochure</button>
     </section>
 
     <!-- Explore Section -->
