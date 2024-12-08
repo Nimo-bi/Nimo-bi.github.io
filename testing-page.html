@@ -118,4 +118,55 @@
         }
 
         function confirmWhatsAppLink() {
-            window.location.href = "https://api.whatsapp.com/send/?phone=60142976513&text=Please+send+me+brochure+for+%22Johor_
+            window.location.href = "https://api.whatsapp.com/send/?phone=60142976513&text=Please+send+me+brochure+for+%22Johor_RTS%22&type=phone_number&app_absent=0";
+        }
+
+        function closeOverlay() {
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
+</head>
+<body>
+    <!-- Landing Section -->
+    <header>
+        <h1>Welcome to Johor Bahru RTS Latest Project</h1>
+        <p>Be ready for the launch of SG/JB RTS. Grab the chance to be part of the next JB's investment hot topic.</p>
+        <img src="./project-image.gif" alt="Project Image" style="width:100%; max-width:600px;">
+    </header>
+
+    <!-- Project Details Section -->
+    <section id="details">
+        <h2>About the Project</h2>
+        <p><strong>Starting at RM490k/$150k</strong></p>
+        <p><strong>Purpose:</strong> Tier 1 Investment Project or Ownstay Suitable</p>
+        <p><strong>Size & Layouts:</strong> Up to 4 Bedrooms, 497sqft - 1169sqft</p>
+        <p><strong>Landmark/Location:</strong> Bukit Chagar, Opposite Johor Bahru Checkpoint (CIQ)</p>
+        <br><br>
+        <button class="cta-button">Book Now for Appointment</button>
+        <button class="download-button" onclick="showOverlay()">Download Brochure</button>
+    </section>
+
+    <!-- Explore Section -->
+    <section>
+        <h2>Explore the Area</h2>
+        <a onclick="toggleIframe()">Explore</a>
+        <iframe id="propertyMap" src="https://www.google.com/maps/d/u/3/embed?mid=1KT5KUnQ-PQndrHfXW2Hdc0rL1l_LAss&ehbc=2E312F"></iframe>
+    </section>
+
+    <!-- Contact Section -->
+    <footer>
+        <h2>Contact Us</h2>
+        <p>Have questions? Get in touch with us!</p>
+        <button class="contact-button">Contact Us</button>
+    </footer>
+
+    <!-- Overlay -->
+    <div id="overlay" class="overlay">
+        <div class="overlay-content">
+            <p>The brochure will be automatically sent to your WhatsApp.</p>
+            <button class="confirm-button" onclick="confirmWhatsAppLink()">Confirm</button>
+            <button class="close-button" onclick="closeOverlay()">Close</button>
+        </div>
+    </div>
+</body>
+</html>
