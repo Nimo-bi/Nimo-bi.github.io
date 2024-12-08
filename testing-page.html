@@ -58,7 +58,20 @@
             color: #0056b3;
         }
 
-        .overlay {
+        .cta_overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .brochure_overlay {
             position: fixed;
             top: 0;
             left: 0;
@@ -172,14 +185,14 @@
     </footer>
 
     <!-- Overlay -->
-    <div id="brochure_overlay" class="overlay">
+    <div id="brochure_overlay" class="brochure_overlay">
         <div class="overlay-content">
             <p>The brochure will be automatically sent to your WhatsApp.</p>
             <button class="confirm-button" onclick="confirmWhatsAppLink()">Confirm</button>
             <button class="close-button" onclick="closeOverlay()">Close</button>
         </div>
     </div>
-     <div id="cta_overlay" class="overlay">
+     <div id="cta_overlay" class="cta_overlay">
         <div class="overlay-content">
             <p>Our Chatbot has all the info shareable info on the project. Or we are here if you prefer the human touch.</p>
             <button class="bot-button" onclick="directToChatbot()">Book with our Chatbot</button>
