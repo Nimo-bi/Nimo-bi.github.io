@@ -124,6 +124,14 @@
         function closeOverlay() {
             document.getElementById('overlay').style.display = 'none';
         }
+
+        function directToChatbot() {
+            window.location.href = "https://api.whatsapp.com/send/?phone=60142976513&text=I+would+like+to+know+more+and+book+appointment+%22Johor_RTS%22&type=phone_number&app_absent=0";
+        }
+
+        function directToHuman() {
+            window.location.href = "https://api.whatsapp.com/send/?phone=60172362514&text=Hey+tell+me+more+for+%22Johor_RTS%22&type=phone_number&app_absent=0";
+        }
     </script>
 </head>
 <body>
@@ -138,11 +146,11 @@
     <section id="details">
         <h2>About the Project</h2>
         <p><strong>Starting at RM490k/$150k</strong></p>
-        <p><strong>Purpose:</strong> Tier 1 Investment Project or Ownstay Suitable</p>
+        <p><strong>Purpose:</strong>Freehold Tier 1 Investment Project & Ownstay</p>
         <p><strong>Size & Layouts:</strong> Up to 4 Bedrooms, 497sqft - 1169sqft</p>
         <p><strong>Landmark/Location:</strong> Bukit Chagar, Opposite Johor Bahru Checkpoint (CIQ)</p>
         <br><br>
-        <button class="cta-button">Book Now for Appointment</button>
+        <button class="cta-button" onclick="showOverlay()">Book Now for Appointment</button>
         <button class="download-button" onclick="showOverlay()">Download Brochure</button>
     </section>
 
@@ -161,11 +169,18 @@
     </footer>
 
     <!-- Overlay -->
-    <div id="overlay" class="overlay">
+    <div id="brochure_overlay" class="overlay">
         <div class="overlay-content">
             <p>The brochure will be automatically sent to your WhatsApp.</p>
             <button class="confirm-button" onclick="confirmWhatsAppLink()">Confirm</button>
             <button class="close-button" onclick="closeOverlay()">Close</button>
+        </div>
+    </div>
+     <div id="cta_overlay" class="overlay">
+        <div class="overlay-content">
+            <p>Our Chatbot has all the info shareable info on the project. Or we are here if you prefer the human touch.</p>
+            <button class="bot-button" onclick="directToChatbot()">Book with our Chatbot</button>
+            <button class="human-button" onclick="directToHuman()">Talk to human</button>
         </div>
     </div>
 </body>
