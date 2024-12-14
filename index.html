@@ -114,7 +114,7 @@
             display: block; /* Removes inline spacing around the image */
             margin: 0; /* Removes default margins */
             position: relative; /* Ensures it stays in place */
-            left: 0; /* Aligns the image to the start of the page */
+            /*left: 0;  Aligns the image to the start of the page */
         }
 
         .brochure_overlay {
@@ -234,10 +234,13 @@
         <br>
         <p>想了解新山中心区最佳租赁策略？</p>
         <strong>想知道为什么新山中心区的房价正追赶吉隆坡一级房价？</strong>
+        </section>
         <br>
+        <section id="section_CTA">
+        <hr style="border: 0; height: 1px; background: #ccc; margin: 0;">
         <button class="cta-button" onclick="showApptOverlay()">预约看房</button>
         <button class="download-button" onclick="showBrochureOverlay()">下载宣传册</button>
-    </section>
+        </section>
 
     <!-- 探索区域部分 -->
     <section>
@@ -245,7 +248,7 @@
         <a onclick="toggleIframe()">探索</a>
         <iframe id="propertyMap" src="https://www.google.com/maps/d/u/1/embed?mid=1fAbHJ2YNg7hFWubjKJZMC0WLBQwc9bE&ehbc=2E312F&noprof=1" width="640" height="480">探索JB</iframe>
     </section>
-
+    
     <!-- 联系部分 -->
     <footer>
         <h2>联系我们</h2>
