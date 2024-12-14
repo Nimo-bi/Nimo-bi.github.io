@@ -141,6 +141,10 @@
             document.getElementById('cta_overlay').style.display = 'flex';
         }
 
+        function contactUsOverlay() {
+            document.getElementById('contactUs_overlay').style.display = 'flex';
+        }
+    
         function showBrochureOverlay() {
             document.getElementById('brochure_overlay').style.display = 'flex';
         }
@@ -158,7 +162,7 @@
         }
 
         function directToHuman() {
-            window.location.href = "https://api.whatsapp.com/send/?phone=60172362514&text=%E8%B7%91%E5%93%A5%2C%E5%91%8A%E8%AF%89%E6%88%91%E6%9B%B4%E5%A4%9A%E5%85%B3%E4%BA%8E%22Johor_RTS%22&type=phone_number&app_absent=0";
+            window.location.href = "https://api.whatsapp.com/send/?phone=60142976513&text=%E8%B7%91%E5%93%A5%2C%E5%91%8A%E8%AF%89%E6%88%91%E6%9B%B4%E5%A4%9A%E5%85%B3%E4%BA%8E%22Johor_RTS%22&type=phone_number&app_absent=0";
         }
     </script>
 </head>
@@ -204,7 +208,7 @@
     <footer>
         <h2>联系我们</h2>
         <p>有疑问？请联系我们！</p>
-        <button class="contact-button">联系我们</button>
+        <button class="contact-button" onclick="contactUsOverlay()">联系我们</button>
     </footer>
 
     <!-- 弹出层 -->
@@ -220,6 +224,13 @@
             <p>联系我们并预约看房时间</p>
             <button class="bot-button" onclick="directToChatbot()">联系</button>
             <!--<button class="human-button" onclick="directToHuman()">与人工交流</button>-->
+        </div>
+    </div>
+    
+      <div id="contactUs_overlay" class="contactUs_overlay">
+        <div class="overlay-content">
+            <p>联系我们了解更多</p>
+            <button class="bot-button" onclick="confirmWhatsAppLink()">联系</button>
         </div>
     </div>
 </body>
