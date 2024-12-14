@@ -106,6 +106,14 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a premium feel */
         }
 
+        .projectPic {
+            width: 100%; /* Ensures the image spans the full width of the parent container */
+            height: auto; /* Maintains the aspect ratio */
+            max-width: 100%; /* Prevents the image from exceeding the width of the container */
+            display: block; /* Removes any unwanted inline spacing around the image */
+            margin: 0 auto; /* Centers the image horizontally */
+        }
+
         .brochure_overlay {
             position: fixed;
             top: 0;
@@ -201,7 +209,7 @@
     <header>
         <h1>欢迎来到新山 RTS 最新项目</h1>
         <p class="subtitle">准备迎接新加坡/新山 RTS 的启航。抓住成为新山投资热门话题的机会。</p>
-        <img src="./project-image.gif" alt="项目图片" style="width:100%; max-width:1200px;">
+        <img class="projectPic" src="./project-image.gif" alt="项目图片" style="width:100%; max-width:1200px;">
     </header>
 
     <!-- 项目详情部分 -->
