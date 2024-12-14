@@ -107,11 +107,12 @@
         }
 
         .projectPic {
-            width: 100%; /* Ensures the image spans the full width of the parent container */
+            width: 100vw; /* Viewport width: ensures it spans the full page width */
             height: auto; /* Maintains the aspect ratio */
-            max-width: 100%; /* Prevents the image from exceeding the width of the container */
-            display: block; /* Removes any unwanted inline spacing around the image */
-            margin: 0 auto; /* Centers the image horizontally */
+            display: block; /* Removes inline spacing around the image */
+            margin: 0; /* Removes default margins */
+            position: relative; /* Ensures it stays in place */
+            left: 0; /* Aligns the image to the start of the page */
         }
 
         .brochure_overlay {
