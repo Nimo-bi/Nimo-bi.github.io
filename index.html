@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JB RTS 房地产项目</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+        }
+
+        header, section, footer {
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1, h2 {
+            margin-bottom: 15px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            display: none; /* 默认隐藏 */
+            margin-top: 20px;
+        }
+
+        .cta-button, .download-button, .contact-button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .cta-button:hover, .download-button:hover, .contact-button:hover {
+            background-color: #0056b3;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007BFF;
+            cursor: pointer;
+        }
+
+        a:hover {
+            color: #0056b3;
+        }
+
+        .cta_overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .brochure_overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .overlay-content {
+            background: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            width: 80%;
+            max-width: 400px;
+        }
+
+        .confirm-button, .human-button, .bot-button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .subtitle {
+            font-style: italic;
+        }
+
+        .confirm-button:hover {
+            background-color: #218838;
+        }
+
+        .price {
+            color: red;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .close-button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .close-button:hover {
+            background-color: #c82333;
+        }
+    </style>
+    <script>
+        function toggleIframe() {
+            const iframe = document.getElementById('propertyMap');
+            iframe.style.display = iframe.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function showApptOverlay() {
+            document.getElementById('cta_overlay').style.display = 'flex';
+        }
+
+        function contactUsOverlay() {
+            document.getElementById('contactUs_overlay').style.display = 'flex';
+        }
+    
+        function showBrochureOverlay() {
+            document.getElementById('brochure_overlay').style.display = 'flex';
+        }
+
+        function confirmWhatsAppLink() {
+            window.location.href = "https://api.whatsapp.com/send/?phone=60142976513&text=%E8%AF%B7%E5%8F%91%E7%BB%99%E6%88%91%E5%85%B3%E4%BA%8E%22Johor_RTS%22%E7%9A%84%E4%BC%A0%E5%8D%8F&type=phone_number&app_absent=0";
+        }
+
+        function closeOverlay() {
+            document.getElementById('brochure_overlay').style.display = 'none';
+        }
+
+        function directToChatbot() {
+            window.location.href = "https://api.whatsapp.com/send/?phone=60142976513&text=%E6%88%91%E6%83%B3%E8%AF%A6%E7%9F%A5%E6%9B%B4%E5%A4%9A%E5%B9%B6%E9%A2%84%E7%BA%A6%E8%AE%BF%E9%97%AE%22Johor_RTS%22&type=phone_number&app_absent=0";
+        }
+
+        function directToHuman() {
+            window.location.href = "https://api.whatsapp.com/send/?phone=60142976513&text=%E8%B7%91%E5%93%A5%2C%E5%91%8A%E8%AF%89%E6%88%91%E6%9B%B4%E5%A4%9A%E5%85%B3%E4%BA%8E%22Johor_RTS%22&type=phone_number&app_absent=0";
+        }
+    </script>
+</head>
+<body>
+    <!-- 着陆部分 -->
+    <header>
+        <h1>欢迎来到新山 RTS 最新项目</h1>
+        <p class="subtitle">准备迎接新加坡/新山 RTS 的启航。抓住成为新山投资热门话题的机会。</p>
+        <img src="./project-image.gif" alt="项目图片" style="width:100%; max-width:1200px;">
+    </header>
+
+    <!-- 项目详情部分 -->
+    <section id="details">
+        <h2>项目简介</h2>
+        <strong>起价 </strong><p class="price">RM4XXk/$1XXk</p>
+        <p><strong>用途：</strong>永久产权一级投资项目 & 自住</p>
+        <p><strong>面积与布局：</strong>最多 4 房，497 平方英尺 - 1,344 平方英尺</p>
+        <p><strong>地标/位置：</strong>Bukit Chagar，靠近新山关口 (CIQ)</p>
+        <br><br>
+        <strong>为什么选择新山 RTS 项目</strong>
+        <p>🌟租金高达 RM4.5k，提供 8% 的租金回报率</p>
+        <p>连接 CIQ 和Bukit Chagar车站的有盖人行道🚶</p>
+        <p>🛏️宽敞卧室可容纳特大号床</p>
+        <p>自住布局 1,344 平方英尺🏠</p>
+        <p>🍴配备厨房柜、吸油烟机和灶具、空调等...</p>
+        <br>
+        <strong>想了解新山中心区最佳租赁策略？</strong><br>
+        <strong>想知道为什么新山中心区的房价正追赶吉隆坡一级房价？</strong>
+        <br>
+        <p>立即了解更多</p>
+        <button class="cta-button" onclick="showApptOverlay()">预约看房</button>
+        <button class="download-button" onclick="showBrochureOverlay()">下载宣传册</button>
+    </section>
+
+    <!-- 探索区域部分 -->
+    <section>
+        <h2>探索周边区域</h2>
+        <a onclick="toggleIframe()">探索</a>
+        <iframe id="propertyMap" src="https://www.google.com/maps/d/u/1/embed?mid=1fAbHJ2YNg7hFWubjKJZMC0WLBQwc9bE&ehbc=2E312F&noprof=1" width="640" height="480">探索JB</iframe>
+    </section>
+
+    <!-- 联系部分 -->
+    <footer>
+        <h2>联系我们</h2>
+        <p>有疑问？请联系我们！</p>
+        <button class="contact-button" onclick="contactUsOverlay()">联系我们</button>
+    </footer>
+
+    <!-- 弹出层 -->
+    <div id="brochure_overlay" class="brochure_overlay">
+        <div class="overlay-content">
+            <p>宣传册将自动发送到您的 WhatsApp。</p>
+            <button class="confirm-button" onclick="confirmWhatsAppLink()">确认</button>
+            <!--<button class="close-button" onclick="closeOverlay()">关闭</button>-->
+        </div>
+    </div>
+    <div id="cta_overlay" class="cta_overlay">
+        <div class="overlay-content">
+            <p>联系我们并预约看房时间</p>
+            <button class="bot-button" onclick="directToChatbot()">联系</button>
+            <!--<button class="human-button" onclick="directToHuman()">与人工交流</button>-->
+        </div>
+    </div>
+    
+      <div id="contactUs_overlay" class="contactUs_overlay">
+        <div class="overlay-content">
+            <p>联系我们了解更多</p>
+            <button class="bot-button" onclick="confirmWhatsAppLink()">联系</button>
+        </div>
+    </div>
+</body>
+</html>
