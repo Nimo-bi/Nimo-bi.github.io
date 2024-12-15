@@ -170,12 +170,13 @@
 
         document.getElementById('contact-button').addEventListener('click', () => {
         btnContact_clickCount++; 
+        });
        
         document.getElementById('cta-button').addEventListener('click', () => {
-        btnApt_clickCount++; 
+        btnApt_clickCount++; });
             
         document.getElementById('download-button ').addEventListener('click', () => {
-        btnBrochure_clickCount++; 
+        btnBrochure_clickCount++; });
          // Track website visits using local storage
           if (localStorage.getItem('visitCount')) {
             let visitCount = parseInt(localStorage.getItem('visitCount'));
