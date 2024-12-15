@@ -164,6 +164,27 @@
         function directToHuman() {
             window.location.href = "https://api.whatsapp.com/send/?phone=60142976513&text=%E8%B7%91%E5%93%A5%2C%E5%91%8A%E8%AF%89%E6%88%91%E6%9B%B4%E5%A4%9A%E5%85%B3%E4%BA%8E%22Johor_RTS%22&type=phone_number&app_absent=0";
         }
+        let btnBrochure_clickCount = 0;
+        let btnContact_clickCount = 0;
+        let btnApt_clickCount = 0;
+
+        document.getElementById('contact-button').addEventListener('click', () => {
+        btnContact_clickCount++; 
+       
+        document.getElementById('cta-button').addEventListener('click', () => {
+        btnApt_clickCount++; 
+            
+        document.getElementById('download-button ').addEventListener('click', () => {
+        btnBrochure_clickCount++; 
+         // Track website visits using local storage
+          if (localStorage.getItem('visitCount')) {
+            let visitCount = parseInt(localStorage.getItem('visitCount'));
+            localStorage.setItem('visitCount', visitCount + 1);
+          } else {
+            localStorage.setItem('visitCount', 1);
+          }
+          console.log('Visits:', localStorage.getItem('visitCount'));
+        });
     </script>
 </head>
 <body>
@@ -193,8 +214,8 @@
         <strong>想知道为什么新山中心区的房价正追赶吉隆坡一级房价？</strong>
         <br>
         <p>立即了解更多</p>
-        <button class="cta-button" onclick="showApptOverlay()">预约看房</button>
-        <button class="download-button" onclick="showBrochureOverlay()">下载宣传册</button>
+        <button id="cta-button" class="cta-button" onclick="showApptOverlay()">预约看房</button>
+        <button id="download-button" class="download-button" onclick="showBrochureOverlay()">下载宣传册</button>
     </section>
 
     <!-- 探索区域部分 -->
@@ -208,7 +229,7 @@
     <footer>
         <h2>联系我们</h2>
         <p>有疑问？请联系我们！</p>
-        <button class="contact-button" onclick="contactUsOverlay()">联系我们</button>
+        <button id="contact-button" class="contact-button" onclick="contactUsOverlay()">联系我们</button>
     </footer>
 
     <!-- 弹出层 -->
