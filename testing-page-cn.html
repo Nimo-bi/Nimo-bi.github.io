@@ -168,7 +168,7 @@
         let btnContact_clickCount = 0;
         let btnApt_clickCount = 0;
 
-        document.getElementById('contact-button').addEventListener('click', () => {
+        /**document.getElementById('contact-button').addEventListener('click', () => {
         btnContact_clickCount++; 
         });
        
@@ -178,10 +178,10 @@
         document.getElementById('download-button ').addEventListener('click', () => {
         btnBrochure_clickCount++; });
          // Track website visits using local storage
-          if (localStorage.getItem('visitCount')) {
+        if (localStorage.getItem('visitCount')) {
             let visitCount = parseInt(localStorage.getItem('visitCount'));
             localStorage.setItem('visitCount', visitCount + 1);
-          } else {
+        } else {
             localStorage.setItem('visitCount', 1);
           }
           console.log('Visits:', localStorage.getItem('visitCount'));
@@ -189,7 +189,7 @@
 
         console.log('Apt Btn:', localStorage.getItem('btnApt_clickCount'));
         console.log('contact Btn:', localStorage.getItem('btnContact_clickCount'));
-        console.log('download Btn:', localStorage.getItem('btnBrochure_clickCount'));
+        console.log('download Btn:', localStorage.getItem('btnBrochure_clickCount')); **/
     </script>
 </head>
 <body>
