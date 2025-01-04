@@ -7,6 +7,20 @@
 
 <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
 <script src="https://files.bpcontent.cloud/2024/12/29/01/20241229015115-PG624M2N.js"></script>
+<script>
+  // Initialize the Webchat when the page loads
+  window.addEventListener('load', function () {
+    window.botpressWebChat.init({
+      hostUrl: "https://cdn.botpress.cloud/webchat/v2.2",
+      botId: "5353b419-421e-4d14-b97b-35e5c7b9668e" // Replace with your Bot ID
+    });
+
+    // Automatically open the Webchat
+    window.botpressWebChat.sendEvent({
+      type: 'show',
+    });
+  });
+</script>
     
 </body>
 </html>
