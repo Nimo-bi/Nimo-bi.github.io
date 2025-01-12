@@ -265,31 +265,8 @@
         <a onclick="toggleIframe()">Show Map</a>
         <iframe id="propertyMap" src="https://www.google.com/maps/d/u/1/embed?mid=1KT5KUnQ-PQndrHfXW2Hdc0rL1l_LAss&ehbc=2E312F" width="640" height="480">Explore KLCC</iframe>
     </section>
-    
-
-    <!-- 弹出层 -->
-    <div id="brochure_overlay" class="brochure_overlay">
-        <div class="overlay-content">
-            <p>Brochure will be send to you through WhatsApp。</p>
-            <button class="confirm-button" onclick="confirmWhatsAppLink()">Confirm</button>
-            <!--<button class="close-button" onclick="closeOverlay()">Close</button>-->
-        </div>
-    </div>
-    <div id="cta_overlay" class="cta_overlay">
-        <div class="overlay-content">
-            <p>Contact us to book appointment</p>
-            <button class="bot-button" onclick="directToChatbot()">Ask our bot</button>
-            <!--<button class="human-button" onclick="directToHuman()">Live Agent</button>-->
-        </div>
-    </div>
-    
-      <div id="contactUs_overlay" class="contactUs_overlay">
-        <div class="overlay-content">
-            <p>Contact us to find out more</p>
-            <button class="bot-button" onclick="confirmWhatsAppLink()">Contact</button>
-        </div>
-    </div>
-<section id="chatDiv">
+	
+<section>
 	<div class="webchat" style="height: 600px; width: 400px;">
   <iframe id="chatbot" 
     style="height: 100%; width: 100%; border: none;"
@@ -344,6 +321,28 @@ window.botpress.init({
         <button class="contact-button" onclick="contactUsOverlay()">I have questions</button>
 	<p>Prefer a live consultant?</p>
         <button class="contact-button" onclick="contactUsOverlay()">Contact Us</button>
-    </footer>	
+    </footer>
+	    <!-- 弹出层 -->
+    <div id="brochure_overlay" class="brochure_overlay">
+        <div class="overlay-content">
+            <p>Brochure will be send to you through WhatsApp。</p>
+            <button class="confirm-button" onclick="confirmWhatsAppLink()">Confirm</button>
+            <!--<button class="close-button" onclick="closeOverlay()">Close</button>-->
+        </div>
+    </div>
+    <div id="cta_overlay" class="cta_overlay">
+        <div class="overlay-content">
+            <p>Contact us to book appointment</p>
+            <button class="bot-button" onclick="directToChatbot()">Ask our bot</button>
+            <!--<button class="human-button" onclick="directToHuman()">Live Agent</button>-->
+        </div>
+    </div>
+    
+      <div id="contactUs_overlay" class="contactUs_overlay">
+        <div class="overlay-content">
+            <p>Contact us to find out more</p>
+            <button class="bot-button" onclick="confirmWhatsAppLink()">Contact</button>
+        </div>
+    </div>
 </body>
 </html>
