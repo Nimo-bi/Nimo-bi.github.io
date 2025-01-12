@@ -178,14 +178,20 @@
             background-color: #c82333;
         }
 	    
-	.chatbot {
-		display: block;
-		width: 100%;
-            	 /*height: 100px;*/
-            	border: none;
-            	display: none;
-            	margin-top: 0px;
+	#chatbot {
+	    width: 400px; /* Adjust width */
+	    height: 600px; /* Adjust height */
+	    position: fixed; /* Makes the iframe float */
+	    bottom: 20px; /* Position it 20px from the bottom */
+	    right: 20px; /* Position it 20px from the right */
+	    border: 1px solid #ccc; /* Optional: Add a border for visibility */
+	    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for floating effect */
+	    z-index: 1000; /* Ensure it's above other elements */
+	    display: none; /* Initially hidden */
+	    border-radius: 8px; /* Optional: Rounded corners for aesthetics */
+	    background: white; /* Optional: Ensure the iframe has a visible background */
 	}
+
 	    
 	.chatdiv {
     		 /*height: 100px;       /* Set a specific height */
