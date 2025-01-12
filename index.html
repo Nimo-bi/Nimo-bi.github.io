@@ -186,6 +186,11 @@
             iframe.style.display = iframe.style.display === 'block' ? 'none' : 'block';
         }
 
+	function toggleChatBot() {
+            const iframe = document.getElementById('chatbot');
+            iframe.style.display = iframe.style.display === 'block' ? 'none' : 'block';
+        }
+
         function showApptOverlay() {
             document.getElementById('cta_overlay').style.display = 'flex';
         }
@@ -255,9 +260,10 @@
         <a onclick="toggleIframe()">Show Map</a>
         <iframe id="propertyMap" src="https://www.google.com/maps/d/u/1/embed?mid=1KT5KUnQ-PQndrHfXW2Hdc0rL1l_LAss&ehbc=2E312F" width="640" height="480">Explore KLCC</iframe>
     </section>
+	 <a onclick="toggleChatBot()">Open Chatbot</a>
 	<script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
 	<div class="webchat" style="height: 600px; width: 400px;">
-	  <iframe
+	  <iframe id="chatbot"
 	    style="height: 100%; width: 100%; border: none;"
 	    srcdoc='
 	    <!doctype html>
