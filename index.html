@@ -3,6 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+	<script>
+	  // Your Botpress initialization code
+	  window.addEventListener('load', function () {
+	    window.botpressWebChat.init({
+	      hostUrl: "https://cdn.botpress.cloud/webchat/v2.2",
+	      botId: "733c60e1-1055-40f4-9ba4-583b01e3b2d9", // Replace with your bot ID
+	    });
+	    window.botpressWebChat.sendEvent({ type: 'show' });
+	  });
+	</script>
     <title>Kuala Lumpur City Centre 2025 Projects</title>
     <style>
         * {
@@ -178,7 +189,6 @@
             background-color: #c82333;
         }
     </style>
-    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js" defer></script>
     <script>
 	
         function toggleIframe() {
