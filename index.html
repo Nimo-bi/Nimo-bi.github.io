@@ -179,7 +179,7 @@
             background-color: #c82333;
         }
 
-	#chatbot {
+	.chatbot {
 		display: block;
 	}
     </style>
@@ -264,14 +264,7 @@
         <a onclick="toggleIframe()">Show Map</a>
         <iframe id="propertyMap" src="https://www.google.com/maps/d/u/1/embed?mid=1KT5KUnQ-PQndrHfXW2Hdc0rL1l_LAss&ehbc=2E312F" width="640" height="480">Explore KLCC</iframe>
     </section>
-    <!-- 联系部分 -->
-    <footer>
-        <h2>Contact Us</h2>
-        <p>More questions? Talk to our 24/7 assistant</p>
-        <button class="contact-button" onclick="contactUsOverlay()">I have questions</button>
-	<p>Prefer a live consultant?</p>
-        <button class="contact-button" onclick="contactUsOverlay()">Contact Us</button>
-    </footer>
+    
 
     <!-- 弹出层 -->
     <div id="brochure_overlay" class="brochure_overlay">
@@ -297,7 +290,7 @@
     </div>
 <section>
 	<div class="webchat" style="height: 600px; width: 400px;">
-  <iframe id="chatbot"
+  <iframe id="chatbot" 
     style="height: 100%; width: 100%; border: none;"
     srcdoc='
     <!doctype html>
@@ -343,5 +336,13 @@ window.botpress.init({
   ></iframe>
 </div>
 </section>
+<!-- 联系部分 -->
+    <footer>
+        <h2>Contact Us</h2>
+        <p>More questions? Talk to our 24/7 assistant</p>
+        <button class="contact-button" onclick="contactUsOverlay()">I have questions</button>
+	<p>Prefer a live consultant?</p>
+        <button class="contact-button" onclick="contactUsOverlay()">Contact Us</button>
+    </footer>	
 </body>
 </html>
