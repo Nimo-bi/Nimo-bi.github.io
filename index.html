@@ -184,14 +184,13 @@
 	}
     </style>
     <script>
-	
+	window.onload = () => {
+	    const iframe = document.getElementById('chatbot');
+	    iframe.style.display = iframe.style.display === 'block' ? 'none' : 'block';
+	};
+	    
         function toggleIframe() {
             const iframe = document.getElementById('propertyMap');
-            iframe.style.display = iframe.style.display === 'block' ? 'none' : 'block';
-        }
-
-	function toggleChatBot() {
-            const iframe = document.getElementById('chatbot');
             iframe.style.display = iframe.style.display === 'block' ? 'none' : 'block';
         }
 
@@ -271,7 +270,6 @@
 		<p>Prefer a live consultant?</p>
 	        <button class="contact-button" onclick="contactUsOverlay()">Contact Us</button>
 	</footer>
-	<a onclick="toggleChatBot()">chatbot</a>
 	<section>
 	<div class="webchat" style="height: 600px; width: 400px;">
 	  <iframe id="chatbot" 
