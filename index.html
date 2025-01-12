@@ -178,6 +178,10 @@
         .close-button:hover {
             background-color: #c82333;
         }
+
+	#chatbot {
+		display: block;
+	}
     </style>
     <script>
 	
@@ -293,7 +297,7 @@
     </div>
 <section>
 	<div class="webchat" style="height: 600px; width: 400px;">
-  <iframe
+  <iframe id="chatbot"
     style="height: 100%; width: 100%; border: none;"
     srcdoc='
     <!doctype html>
