@@ -190,12 +190,6 @@
 	}
 
 	#webchat {
-		display: none;
-		width: 0px; /* Default width for larger screens */
-   		height: 0px; /* Default height for larger screens */
-		position: fixed;
-		bottom: 0px;
-		right: 0px;
 		z-index: 9998;
 	}
 
@@ -226,13 +220,6 @@
             iframe.style.display = iframe.style.display === 'block' ? 'none' : 'block';
         };
 
-	function openChat(){
-            const chatSection = document.getElementById('webChat');
-            	chatSection.style.display = 'block';
-		chatSection.style.width = '400px';
-		chatSection.style.width = '600px';
-		chatSection.style.position = 'fixed';
-        };
 
         function showApptOverlay() {
             document.getElementById('cta_overlay').style.display = 'flex';
@@ -307,7 +294,7 @@
 	<footer>
         	<h2>Contact Us</h2>
 	        <p>More questions? Talk to us 24/7</p>
-	        <button class="contact-button" onclick="openChat()">Chat With Us</button>
+	        <button class="contact-button" onclick="contactUsOverlay()">Chat With Us</button>
 		<p>Prefer a live consultant?</p>
 	        <button class="contact-button" onclick="contactUsOverlay()">Contact Us</button>
 	</footer>
