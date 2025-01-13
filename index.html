@@ -188,6 +188,15 @@
 		display: none;
 	}
 
+	#webchat {
+		display: none;
+		width: 0px; /* Default width for larger screens */
+   		height: 0px; /* Default height for larger screens */
+		position: fixed;
+		bottom: 0px;
+		right: 0px;
+	}
+
 	/* Responsive styling for mobile devices */
 	@media screen and (max-width: 768px) {
 	    #chatbot {
@@ -217,8 +226,11 @@
         }
 
 	function openChat() {
-            const iframe = document.getElementById('chatbot');
-            iframe.style.display = 'block';
+            const chatSection = document.getElementById('webChat');
+            	chatSection.style.display = block;
+		chatSection.style.width = 400px;
+		chatSection.style.width = 600px;
+		chatSection.style.position = fixed;
         }
 
         function showApptOverlay() {
