@@ -179,14 +179,43 @@
         }
 	    
 	#chatbot {
-	    width: 400px; /* Adjust width */
-	    height: 600px; /* Adjust height */
-	    position: fixed; /* Makes the iframe float */
-	    bottom: 20px; /* Position it 20px from the bottom */
-	    right: 20px; /* Position it 20px from the right */
-	    z-index: 1000; /* Ensure it's above other elements */
-	    display: none; /* Initially hidden */
-	    border-radius: 8px; /* Optional: Rounded corners for aesthetics */
+		width: 400px; /* Default width for larger screens */
+   		height: 600px; /* Default height for larger screens */
+		position: fixed;
+		bottom: 20px;
+		right: 20px;
+		z-index: 1000;
+		display: none;
+		border-radius: 8px;
+		background: white;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	}
+
+	/* Responsive styling for mobile devices */
+	@media screen and (max-width: 768px) {
+	    #chatbot {
+	        width: 90%; /* Adjust width to fit smaller screens */
+	        height: 80%; /* Adjust height to fit smaller screens */
+	        bottom: 10px; /* Reduce space from bottom */
+	        right: 5%; /* Center it horizontally */
+	    }
+	}
+
+	    /* Ensure buttons are not cut off */
+	.contactUs_overlay, .cta_overlay, .brochure_overlay {
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    padding: 10px; /* Add padding for smaller screens */
+	}
+	
+	.overlay-content {
+	    width: 90%; /* Adjust overlay content width for mobile */
+	    max-width: 400px;
+	    background: white;
+	    border-radius: 8px;
+	    padding: 20px;
+	    text-align: center;
 	}
 
 	    
