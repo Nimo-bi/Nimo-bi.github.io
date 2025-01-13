@@ -208,12 +208,17 @@
     <script>
 	window.onload = () => {
 	    const iframe = document.getElementById('chatbot');
-	    iframe.style.display = iframe.style.display === 'block' ? 'none' : 'block';
+	    iframe.style.display = iframe.style.display === 'none';
 	};
 	    
         function toggleIframe() {
             const iframe = document.getElementById('propertyMap');
             iframe.style.display = iframe.style.display === 'block' ? 'none' : 'block';
+        }
+
+	function openChat() {
+            const iframe = document.getElementById('chatbot');
+            iframe.style.display = iframe.style.display === 'block';
         }
 
         function showApptOverlay() {
@@ -288,10 +293,10 @@
 <section id="chatdiv">
 	<footer>
         	<h2>Contact Us</h2>
-	        <p>More questions? Talk to our 24/7 assistant</p>
-	        <button class="contact-button" onclick="contactUsOverlay()">I have questions</button>
-		<p>Prefer a live consultant?</p>
-	        <button class="contact-button" onclick="contactUsOverlay()">Contact Us</button>
+	        <p>More questions? Talk to us 24/7</p>
+	        <button class="contact-button" onclick="openChat()">Chat With Us</button>
+		<!--<p>Prefer a live consultant?</p>
+	        <button class="contact-button" onclick="contactUsOverlay()">Contact Us</button>-->
 	</footer>
 
 	<div class="webchat">
