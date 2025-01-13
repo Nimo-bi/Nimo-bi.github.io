@@ -208,7 +208,6 @@
 	        right: 5%; /* Center it horizontally */
 	    }
 	}
-
 	    
 	.chatdiv {
     		 /*height: 100px;       /* Set a specific height */
@@ -222,22 +221,22 @@
 	    iframe.style.display = 'none';
 	};
 	    
-        function toggleIframe() {
+        function toggleIframe(){
             const iframe = document.getElementById('propertyMap');
             iframe.style.display = iframe.style.display === 'block' ? 'none' : 'block';
-        }
+        };
 
-	function openChat() {
+	function openChat(){
             const chatSection = document.getElementById('webChat');
             	chatSection.style.display = block;
 		chatSection.style.width = 400px;
 		chatSection.style.width = 600px;
 		chatSection.style.position = fixed;
-        }
+        };
 
         function showApptOverlay() {
             document.getElementById('cta_overlay').style.display = 'flex';
-        }
+        };
 
         function contactUsOverlay() {
             document.getElementById('contactUs_overlay').style.display = 'flex';
