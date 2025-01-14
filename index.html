@@ -214,6 +214,10 @@
 	function toggleChatSection(){
             const iframe = document.getElementById('chatdiv');
             iframe.style.display = iframe.style.display === 'block' ? 'none' : 'block';
+		const frame = document.getElementByClass('webchat');
+            frame.style.display = frame.style.display === 'block' ? 'none' : 'block';
+		const bot = document.getElementById('chatbot');
+            bot.style.display = bot.style.display === 'block' ? 'none' : 'block';
         };
 
 
