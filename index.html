@@ -182,11 +182,12 @@
 	    
 	#chatbot {
 		width: 400px; /* Default width for larger screens */
-   		height: 600px; /* Default height for larger screens */
-		/*position: fixed;*/
-		bottom: 20px;
-		right: 20px;
-		z-index: 1000;
+		height: 600px; /* Default height for larger screens */
+		position: fixed;
+		left: 50%; /* Center horizontally */
+		/*transform: translate(-50%, -50%); /* Adjust for the width and height */
+		z-index: 1000; /* Ensure it is above other elements */
+		display: none; /* Initially hidden */
 	}
 
 	/* Responsive styling for mobile devices */
