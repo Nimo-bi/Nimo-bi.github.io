@@ -198,11 +198,10 @@
 	    #chatbot {
 	        width: 90%; /* Adjust width to fit smaller screens */
 	        height: 80%; /* Adjust height to fit smaller screens */
-	        bottom: 10px; /* Reduce space from bottom */
+	        bottom: 100px; /* Reduce space from bottom */
 	        right: 5%; /* Center it horizontally */
 	    }
-	}
-	    
+	}	    
 	.chatdiv {
     		 /*height: 100px;       /* Set a specific height */
     		margin: 0px auto;   /* Center it horizontally with some margin */
@@ -248,20 +247,6 @@
         function directToHuman() {
             window.location.href = "https://api.whatsapp.com/send/?phone=60142976513&text=I+would+like+to+know+more+about+KLCC+Projects";
         }
-
-	function activateIframe() {
-    		const iframe = document.getElementById('chatbot');
-    		iframe.classList.remove('inactive');
-	}
-
-	function deactivateIframe() {
-	    const iframe = document.getElementById('chatbot');
-	    iframe.classList.add('inactive');
-	}
-
-	document.querySelector('.contact-button').addEventListener('click', () => {
-		deactivateIframe();
-	});
     </script>
 </head>
 <body>
