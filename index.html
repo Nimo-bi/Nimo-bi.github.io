@@ -223,9 +223,10 @@
 
 	function toggleChatSection(){
             const iframe = document.getElementById('chatdiv');
-            iframe.style.display = iframe.style.display === 'block' ? 'none' : 'block';
+            /*iframe.style.display = iframe.style.display === 'block' ? 'none' : 'block';
 		const bot = document.getElementById('chatbot');
-            bot.style.display = bot.style.display === 'block' ? 'none' : 'block';
+            bot.style.display = bot.style.display === 'block' ? 'none' : 'block';*/
+		 bot.style.display = 'block';
         };
 
 
@@ -308,7 +309,7 @@
 
 	<footer>
         	<h2>Contact Us</h2>
-	        <p href="https://nimo-bi.github.io#chatbot">More questions? Talk to us 24/7</p>
+	        <p href="https://nimo-bi.github.io#end">More questions? Talk to us 24/7</p>
 	        <button class="contact-button" onclick="toggleChatSection()">Chat With Us</button>
 		<!--<p>Prefer a live consultant?</p>
 	        <button class="contact-button" onclick="contactUsOverlay()">Contact Us</button>-->
@@ -379,6 +380,7 @@
 	  ></iframe>
 	</div>
 </section>
+<a id="end"></a>
 <!-- 联系部分 -->
 	    <!-- 弹出层 -->
     <div id="brochure_overlay" class="brochure_overlay">
