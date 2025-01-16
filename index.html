@@ -193,6 +193,8 @@
 		/*position: fixed;*/
 		/*bottom: 20px;*/
 		z-index: 1000;
+		overflow: hidden;
+		
 	}
 
 	#propertyMap {
@@ -311,7 +313,7 @@
 	<footer>
         	<h2>Contact Us</h2>
 	        <p>More questions? Talk to us 24/7</p>
-		<button class="contact-button" href="#end">jump</button>
+		<a href="#end">jump</button>
 	        <button class="contact-button" href="#end" onclick="toggleChatSection()">Chat With Us</button>
 		<!--<p>Prefer a live consultant?</p>
 	        <button class="contact-button" onclick="contactUsOverlay()">Contact Us</button>-->
@@ -360,7 +362,8 @@
 		<style>
 		  .bpWebchat {
 		  	width: 96vw;
-		  	height: 100vh;
+		  	height: 80vh;
+		  	overflow: hidden;
 		  }
 		  
 		  .bpHeightFull{
