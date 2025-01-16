@@ -229,6 +229,10 @@
 		const bot = document.getElementById('chatbot');
             /*bot.style.display = bot.style.display === 'block' ? 'none' : 'block';*/
 		 bot.style.display = 'block';
+		window.scrollTo({
+      		top: document.body.scrollHeight,
+      		behavior: 'smooth' // Optional: adds smooth scrolling animation
+    });
         };
 
 
