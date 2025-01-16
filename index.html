@@ -226,9 +226,8 @@
             const iframe = document.getElementById('chatdiv');
             /*iframe.style.display = iframe.style.display === 'block' ? 'none' : 'block';*/
 		iframe.style.display = 'block';
-		const wbl = document.getElementsByName('webchat');
-		const wb = wbl[0];
-		wb.classList.replace("bpClose", "bpOpen");
+		
+		
 		const bot = document.getElementById('chatbot');
 		
             /*bot.style.display = bot.style.display === 'block' ? 'none' : 'block';*/
@@ -236,8 +235,11 @@
 		window.scrollTo({
       		top: document.body.scrollHeight,
       		behavior: 'smooth' // Optional: adds smooth scrolling animation
-		
-    });
+    		});
+		const wbl = document.getElementsByClassName('bpReset');
+		const wb = wbl[0];
+		wb.classList.remove("bpClose");
+		wb.classList.remove("bpOpen");
         };
 
 
