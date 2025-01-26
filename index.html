@@ -261,7 +261,7 @@
         }
 
         function closeOverlay() {
-            document.getElementById('brochure_overlay').style.display = 'none';
+            document.getElementById('cta_overlay').style.display = 'none';
         }
 
         function directToChatbot() {
@@ -392,7 +392,8 @@
     <div id="cta_overlay" class="cta_overlay">
         <div class="overlay-content">
             <p>Contact us to book appointment</p>
-            <button class="bot-button" onclick="directToChatbot()">Ask our bot</button>
+            <button class="bot-button" onclick="directToChatbot()">Contact on Whatsapp</button>
+		<button class="close-button" onclick="closeOverlay()">Cancel</button>
             <!--<button class="human-button" onclick="directToHuman()">Live Agent</button>-->
         </div>
     </div>
