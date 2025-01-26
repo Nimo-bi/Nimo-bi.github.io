@@ -211,6 +211,9 @@
 	    }
 	}	    
     </style>
+	<script>
+  fbq('track', 'ViewContent');
+</script>
     <script>
 	window.onload = () => {
 	    const iframe = document.getElementById('chatbot');
@@ -321,11 +324,11 @@
 
 	<footer>
 	        <p>More questions? Talk to us 24/7</p>
-	        <button class="contact-button" href="#end" onclick="toggleChatSection()">Book Appointment</button>
+	        <button class="contact-button" href="#end" onclick="toggleChatSection(); fbq('track', 'Schedule');">Book Appointment</button>
 		<!--<p>Prefer a live consultant?</p>
 	        <button class="contact-button" onclick="contactUsOverlay()">Contact Us</button>-->
 		<h2>Contact Us</h2>
-		<button class="cta-button" onclick="showApptOverlay()">Live Agent</button>
+		<button class="cta-button" onclick="showApptOverlay(); fbq('track', 'Contact');">Live Agent</button>
 	</footer>
 <section id="chatdiv">
 	<div class="webchat" style="width: 100vw; height:100wh">
@@ -390,7 +393,7 @@
     </div>
     <div id="cta_overlay" class="cta_overlay">
         <div class="overlay-content">
-            <p>Contact us to book appointment</p>
+            <p>Contact our consultant</p>
             <button class="bot-button" onclick="directToChatbot()">Contact on Whatsapp</button>
 		<button class="close-button" onclick="closeOverlay()">Cancel</button>
             <!--<button class="human-button" onclick="directToHuman()">Live Agent</button>-->
