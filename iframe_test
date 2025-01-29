@@ -1,1 +1,25 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Test</title>
+</head>
+<body>
+<script>
+const iframe = document.createElement('iframe');
+iframe.src = 'https://www.maybank2u.com.my/home/m2u/common/login.do';
+document.body.appendChild(iframe);
+document.getElementById('iframe').addEventListener('load', () => {
+  console.log("Iframe loaded");
+});
+const iframe = document.getElementById('iframe');
+const iframeDocument = iframe.contentWindow.document; // Security error unless allowed
+
+// Track clicks inside the iframe
+iframeDocument.addEventListener('click', (e) => {
+  console.log("Clicked element:", e.target);
+});
+</script>
+    
+</body>
+</html>
