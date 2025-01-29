@@ -12,7 +12,7 @@ document.body.appendChild(iframe);
 document.getElementById('iframe').addEventListener('load', () => {
   console.log("Iframe loaded");
 });
-const iframe = document.getElementById('iframe');
+iframe = document.getElementById('iframe');
 const iframeDocument = iframe.contentWindow.document; // Security error unless allowed
 
 // Track clicks inside the iframe
