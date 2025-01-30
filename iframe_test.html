@@ -6,20 +6,41 @@
 </head>
 <body>
 <script>
-const iframe = document.createElement('iframe');
-iframe.src = 'https://www.maybank2u.com.my/home/m2u/common/login.do';
-document.body.appendChild(iframe);
-document.getElementById('iframe').addEventListener('load', () => {
-  console.log("Iframe loaded");
-});
-iframe = document.getElementById('iframe');
-const iframeDocument = iframe.contentWindow.document; // Security error unless allowed
+const puppeteer = require('puppeteer');
 
-// Track clicks inside the iframe
-iframeDocument.addEventListener('click', (e) => {
-  console.log("Clicked element:", e.target);
-});
+(async () => {
+  const browser = await puppeteer.launch({ headless: false }); // Use headless: true for background
+  const page = await browser.newPage();
+
+  // Track all clicks on the external page (even those not triggered by Puppeteer)
+  await page.evaluateOnNewDocument(() => {
+    document.addEventListener('click', (event) => {
+      window._clickedElement = event.target.outerHTML; // Store clicked element
+    });
+  });
+
+  // Navigate to your site first
+  await page.goto('https://www.maybank2u.com.my/home/m2u/common/login.do');
+
+  // Click a link that redirects to an external site (e.g., Google)
+  await Promise.all([
+    page.waitForNavigation(),
+    page.click('a#external-link'), // Replace with your link selector
+  ]);
+
+  // Get the external page's HTML
+  const externalPageHTML = await page.content();
+  console.log('External Page HTML:', externalPageHTML);
+
+  // Simulate a click on the external site (e.g., Google's search box)
+  await page.click('input[name="button"]');
+
+  // Get tracked click data from the external site
+  const clickedElement = await page.evaluate(() => window._clickedElement);
+  console.log('Last Clicked Element:', clickedElement);
+
+  await browser.close();
+})();
 </script>
-    
 </body>
 </html>
