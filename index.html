@@ -347,10 +347,49 @@
         <iframe id="propertyMap" src="https://www.google.com/maps/d/u/1/embed?mid=1KT5KUnQ-PQndrHfXW2Hdc0rL1l_LAss&ehbc=2E312F" width="640" height="480">Explore KLCC</iframe>
     </section>
 
+    <!-- Contact Form Section -->
+    <section class="benefits" style="margin: 20px auto; max-width: 600px;">
+        <h2>Request More Information</h2>
+        <form style="text-align: left; padding: 20px;">
+            <div style="margin-bottom: 15px;">
+                <label for="name" style="display: block; margin-bottom: 5px;">Name:</label>
+                <input type="text" id="name" name="name" 
+                    style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;"
+                    required>
+            </div>
+            
+            <div style="margin-bottom: 15px;">
+                <label for="phone" style="display: block; margin-bottom: 5px;">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" 
+                    style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;"
+                    pattern="[0-9]{10,11}" 
+                    title="Please enter valid Malaysian phone number" 
+                    required>
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <label for="purpose" style="display: block; margin-bottom: 5px;">Purpose:</label>
+                <select id="purpose" name="purpose" 
+                    style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;"
+                    required>
+                    <option value="">Select Purpose</option>
+                    <option value="investment">Investment</option>
+                    <option value="own-stay">Own Stay</option>
+                </select>
+            </div>
+            
+            <button type="submit" class="cta-button" 
+                style="width: 100%; padding: 12px; font-size: 16px;"
+                onclick="fbq('track', 'Lead');">
+                Submit Request
+            </button>
+        </form>
+    </section>
+
 	<footer>
 	        <p>More questions? Talk to us 24/7</p>
 	        <button class="contact-button" href="#end" onclick="toggleChatSection(); fbq('track', 'Schedule');">Book Appointment</button>
-		<button class="contact-button" href="#end" onclick="toggleChatSection(); fbq('track', 'Schedule');">Leave Your Contact</button>
+		<!--<button class="contact-button" href="#end" onclick="toggleChatSection(); fbq('track', 'Schedule');">Leave Your Contact</button>-->
 		<!--<p>Prefer a live consultant?</p>
 	        <button class="contact-button" onclick="contactUsOverlay()">Contact Us</button>-->
 		<h2>Contact Us</h2>
