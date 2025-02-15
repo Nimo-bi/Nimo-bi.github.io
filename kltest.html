@@ -12,11 +12,6 @@
             font-family: 'Arial', sans-serif;
         }
 
-        h2 {
-            text-align: center;
-            display: inline-block;
-        }
-
         /* Header Styles */
         header {
             position: fixed;
@@ -45,20 +40,27 @@
         /* Hero Section */
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-                        url('https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
-            background-size: cover;
-            background-position: center;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            text-align: center;
+            overflow: hidden;
+            position: relative;
         }
 
-        .hero-content h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
+        .hero video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .hero-content {
+            text-align: center;
+            color: white;
+            z-index: 1;
         }
 
         .cta-button {
@@ -71,9 +73,21 @@
             margin-top: 20px;
         }
 
+        /* Highlights Section */
+        .highlights-section {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .highlights-section h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
         /* Features Section */
         .features {
-            padding: 100px 50px;
+            padding: 0 50px 100px;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 30px;
@@ -126,28 +140,31 @@
     </header>
 
     <section class="hero">
+        <video width="1920" height="1080" autoplay muted loop playsinline>
+            <source src="https://nimo-bi.github.io/KLCC_Drone.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
         <div class="hero-content">
-             <video width="1920" height="1080" preload="auto" autoplay loop>
-                  <source src="https://nimo-bi.github.io/KLCC_Drone.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-            </video>
+            <h1>Luxury Residences in the Heart of KLCC</h1>
+            <button class="cta-button">Explore Residences</button>
         </div>
     </section>
 
-    <section class="features">
-        <h2 style>Highlights</h2>
-        <br>
-        <div class="feature-card">
-            <img src="amenities.jpg" alt="World-class Amenities">
-            <h3>Freehold</h3>
-        </div>
-        <div class="feature-card">
-            <img src="amenities.jpg" alt="World-class Amenities">
-            <h3>Sky Facilities</h3>
-        </div>
-        <div class="feature-card">
-            <img src="location.jpg" alt="Prime Location">
-            <h3>350m to KLCC</h3>
+    <section class="highlights-section">
+        <h2>Highlights</h2>
+        <div class="features">
+            <div class="feature-card">
+                <img src="amenities.jpg" alt="World-class Amenities">
+                <h3>Freehold</h3>
+            </div>
+            <div class="feature-card">
+                <img src="amenities.jpg" alt="World-class Amenities">
+                <h3>Sky Facilities</h3>
+            </div>
+            <div class="feature-card">
+                <img src="location.jpg" alt="Prime Location">
+                <h3>350m to KLCC</h3>
+            </div>
         </div>
     </section>
 
