@@ -133,6 +133,22 @@
                 padding: 20px;
             }
         }
+	    .cta-button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+		z-index:10000 ;
+        }
+
+        .cta-button:hover {
+            background-color: #0056b3;
+		z-index: 10001;
+        }
     </style>
 </head>
 <body>
@@ -177,8 +193,8 @@
     </section>
     <section class="contactus">
         <h2>Contact Us</h2>
-		<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="20" style="vertical-align: middle; margin-right: 8px;">
-		<button style="background-color: #25D366; color: white; border: none; padding: 10px 20px; font-size: 16px; border-radius: 5px; cursor: pointer;" class="cta-button" onclick="showApptOverlay(); fbq('track', 'Contact');">Whatsapp</button>    
+		<img src="./whatsapp_gold.svg" alt="WhatsApp" width="20" style="vertical-align: middle; margin-right: 8px;">
+		<button style="background-color: #25D366; color: white; border: none; padding: 10px 20px; font-size: 16px; border-radius: 5px; cursor: pointer;" class="whatsapp_btn" onclick="'https://api.whatsapp.com/send/?phone=60142976513&text=I+would+like+to+know+more+about+KLCC+Projects'"; fbq('track', 'Contact');">Whatsapp</button>    
     </section>
 
     <footer>
