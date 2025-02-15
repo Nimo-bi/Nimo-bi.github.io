@@ -350,16 +350,41 @@
     </section>
 
     <!-- Virtual Show Unit Section -->
-    <section class="virtual-show-unit">
+    <section class="virtual-show-unit" active>
         <h2>Virtual Show Unit</h2>
-        <iframe
+	 <div id="layoutA3" class="vr-view active">
+            <iframe
         src="https://avisualiser.my/VR/KLCC/A3_V2/index.html"
-        width="100%"
+        width="80%"
         height="500px"
         frameborder="0"
         allowfullscreen
         allow="xr-spatial-tracking"
         ></iframe>
+        </div>
+
+        <div id="layoutB1" class="vr-view">
+                    <iframe
+        src="https://avisualiser.my/VR/KLCC/B1_V2/index.html"
+        width="80%"
+        height="500px"
+        frameborder="0"
+        allowfullscreen
+        allow="xr-spatial-tracking"
+        ></iframe>
+        </div>
+
+        <div id="layoutC4" class="vr-view">
+                      <iframe
+        src="https://avisualiser.my/VR/KLCC/C4/index.html"
+        width="80%"
+        height="500px"
+        frameborder="0"
+        allowfullscreen
+        allow="xr-spatial-tracking"
+        ></iframe>
+        </div>
+      
     </section>
 
     <!-- 360-Degree View Section -->
@@ -381,11 +406,13 @@
         // Tab functionality
         const tabButtons = document.querySelectorAll('.tab-button');
         const floorPlans = document.querySelectorAll('.floor-plan');
+	const vrView = document.querySelectorAll('.vr-view');
 
         tabButtons.forEach(button => {
             button.addEventListener('click', () => {
                 tabButtons.forEach(btn => btn.classList.remove('active'));
                 floorPlans.forEach(plan => plan.classList.remove('active'));
+		vrView.forEach(view => view.classList.remove('active'));
 
                 button.classList.add('active');
                 const target = button.getAttribute('data-target');
