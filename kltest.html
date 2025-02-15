@@ -161,9 +161,46 @@
 		
 	}
 
-	#propertyMap {
-		aira-hidden: false;
-	}
+	        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .tab-button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            background-color: #c5a47e;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .tab-button.active {
+            background-color: #b59570;
+        }
+
+        .floor-plan {
+            display: none;
+            text-align: center;
+        }
+
+        .floor-plan.active {
+            display: block;
+        }
+
+        .floor-plan img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+
+        .virtual-show-unit, .360-view {
+            margin: 40px 0;
+        }
+
 
 	/* Responsive styling for mobile devices */
 	@media screen and (max-width: 768px) {
@@ -268,6 +305,81 @@
             </div>
         </div>
     </section>
+
+  <!-- Layouts Section -->
+    <section class="layouts">
+        <h2>Layouts</h2>
+        <div class="tabs">
+            <button class="tab-button active" data-target="layoutA">Layout A</button>
+            <button class="tab-button" data-target="layoutB">Layout B</button>
+            <button class="tab-button" data-target="layoutC">Layout C</button>
+        </div>
+
+        <div id="layoutA" class="floor-plan active">
+            <img src="./layoutA.jpg" alt="Layout A">
+            <a href="./layoutA.pdf" class="download-button" download>Download PDF</a>
+        </div>
+
+        <div id="layoutB" class="floor-plan">
+            <img src="./layoutB.jpg" alt="Layout B">
+            <a href="./layoutB.pdf" class="download-button" download>Download PDF</a>
+        </div>
+
+        <div id="layoutC" class="floor-plan">
+            <img src="./layoutC.jpg" alt="Layout C">
+            <a href="./layoutC.pdf" class="download-button" download>Download PDF</a>
+        </div>
+    </section>
+
+    <!-- Virtual Show Unit Section -->
+    <section class="virtual-show-unit">
+        <h2>Virtual Show Unit</h2>
+        <iframe
+            src="https://my.matterport.com/show/?m=1234567890"
+            width="100%"
+            height="500px"
+            frameborder="0"
+            allowfullscreen
+            allow="xr-spatial-tracking"
+        ></iframe>
+    </section>
+
+    <!-- 360-Degree View Section -->
+    <section class="360-view">
+        <h2>360-Degree View</h2>
+        <div id="panorama" style="width: 100%; height: 500px;"></div>
+    </section>
+
+    <!-- Scripts -->
+    <script>
+        // Tab functionality
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const floorPlans = document.querySelectorAll('.floor-plan');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                floorPlans.forEach(plan => plan.classList.remove('active'));
+
+                button.classList.add('active');
+                const target = button.getAttribute('data-target');
+                document.getElementById(target).classList.add('active');
+            });
+        });
+    </script>
+
+    <!-- Pannellum Library -->
+    <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css">
+
+    <script>
+        // Initialize Pannellum
+        pannellum.viewer('panorama', {
+            type: 'equirectangular',
+            panorama: './360-image.jpg', // Replace with your 360 image
+            autoLoad: true,
+        });
+    </script>
 <div id="contact"></div>
 <section class="contactus-callback-container" style="display: flex; justify-content: space-between; align-items: stretch; gap: 0px; padding: 50px 0;">
     <section class="contactus" style="flex: 1; background: #D4C6B1; padding: 20px; box-sizing: border-box; height: 100%;">
