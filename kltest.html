@@ -89,24 +89,6 @@
 		height: 100%;
         }
 
-	.contactus-callback-container {
-	    display: flex;
-	    justify-content: space-between;
-	    align-items: stretch; /* Ensures both sections stretch to the same height */
-	    gap: 20px;
-	    padding: 50px 0;
-	}
-
-	.contactus, .callbackForm {
-	    flex: 1; /* Each section takes equal width */
-	    padding: 20px;
-	    box-sizing: border-box;
-	}
-
-	.callbackForm {
-	    background-color: #f9f9f9; /* Background color for callbackForm */
-	}
-
         .highlights-section h2 {
             font-size: 36px;
             margin-bottom: 40px;
@@ -263,7 +245,7 @@
         </video>
         <div class="hero-content">
             <h1>Luxury Residences in the Heart of KLCC</h1>
-            <button class="cta-button" href="#end" onclick="toggleChatSection(); >Download Brochure</button>
+            <button class="cta-button" href="#end">Download Brochure</button>
         </div>
     </section>
 
@@ -284,16 +266,14 @@
             </div>
         </div>
     </section>
-<section class="contactus-callback-container">
-    <section class="contactus">
+<section class="contactus-callback-container" style="display: flex; justify-content: space-between; align-items: stretch; gap: 20px; padding: 50px 0;">
+    <section class="contactus" style="flex: 1; background: #D4C6B1; padding: 20px; box-sizing: border-box;">
         <h2>Contact Us</h2>
         <img src="./whatsappOri.svg" alt="WhatsApp" width="20" style="vertical-align: middle; margin-right: 8px;">
-        <button style="background-color: #c5a47e; color: white; border: none; padding: 10px 20px; font-size: 16px; border-radius: 5px; cursor: pointer;" class="whatsapp_btn" onclick="window.open('https://api.whatsapp.com/send/?phone=60142976513&text=I+would+like+to+know+more+about+KLCC+Projects', '_blank'); fbq('track', 'Contact');">
-            WhatsApp
-        </button>        
+        <button style="background-color: #c5a47e; color: white; border: none; padding: 10px 20px; font-size: 16px; border-radius: 5px; cursor: pointer;" class="whatsapp_btn" onclick="'https://api.whatsapp.com/send/?phone=60142976513&text=I+would+like+to+know+more+about+KLCC+Projects'"; fbq('track', 'Contact');">Whatsapp</button>        
     </section>
 
-    <section class="callbackForm">
+    <section class="callbackForm" style="flex: 1; padding: 20px; background-color: #f9f9f9; box-sizing: border-box;">
         <h2>Request CallBack</h2>
         <form style="text-align: left; padding: 20px;" action="https://formspree.io/f/movjwwjl" method="POST">
             <div style="margin-bottom: 15px;">
@@ -329,8 +309,8 @@
                     style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;"
                     required>
                     <option value="">Prefer Contact Method</option>
-                    <option value="call">Call</option>
-                    <option value="whatsapp">WhatsApp</option>
+                    <option value="investment">Call</option>
+                    <option value="own-stay">Whatsapp</option>
                 </select>
             </div>
             
@@ -340,9 +320,9 @@
                     style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;"
                     required>
                     <option value="">Prefer Contact Time</option>
-                    <option value="morning">Morning (9am-11am)</option>
-                    <option value="afternoon">Afternoon (12pm-5pm)</option>
-                    <option value="evening">Evening (6pm-10pm)</option>
+                    <option value="investment">Morning (9am-11am)</option>
+                    <option value="own-stay">Afternoon (12pm-5pm)</option>
+                    <option value="own-stay">Evening (6pm-10pm)</option>
                 </select>
             </div>
             
@@ -354,7 +334,7 @@
         </form>
     </section>
 </section>
-  <div id="end">
+<div id="end">
     </div>
 <section id="chatdiv">
 	<div class="webchat" style="width: 100vw; height:100wh">
