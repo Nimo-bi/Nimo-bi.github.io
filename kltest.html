@@ -1,1 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Residences | KLCC Dawn</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
 
+        /* Header Styles */
+        header {
+            position: fixed;
+            width: 100%;
+            padding: 20px 50px;
+            background: rgba(255, 255, 255, 0.95);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        nav a {
+            margin-left: 30px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                        url('https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            padding: 15px 30px;
+            background: #c5a47e;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 100px 50px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            background: #f9f9f9;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .feature-card img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background: #333;
+            color: white;
+            padding: 50px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .features, footer {
+                grid-template-columns: 1fr;
+            }
+            
+            header {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">KLCC DAWN</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#residences">Residences</a>
+            <a href="#amenities">Amenities</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Luxury Residences in the Heart of KLCC</h1>
+            <button class="cta-button">Explore Residences</button>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature-card">
+            <img src="penthouse.jpg" alt="Luxury Penthouse">
+            <h3>Premium Penthouses</h3>
+            <p>Experience unparalleled luxury with our signature penthouses</p>
+        </div>
+        <div class="feature-card">
+            <img src="amenities.jpg" alt="World-class Amenities">
+            <h3>World-class Amenities</h3>
+            <p>State-of-the-art facilities for your comfort and convenience</p>
+        </div>
+        <div class="feature-card">
+            <img src="location.jpg" alt="Prime Location">
+            <h3>Prime Location</h3>
+            <p>Located in the prestigious KLCC Golden Triangle</p>
+        </div>
+    </section>
+
+    <footer>
+        <div>
+            <h4>KLCC Dawn</h4>
+            <p>Jalan Ampang, Kuala Lumpur</p>
+            <p>Malaysia</p>
+        </div>
+        <div>
+            <h4>Contact</h4>
+            <p>+603 1234 5678</p>
+            <p>info@klccdawn.com</p>
+        </div>
+        <div>
+            <h4>Legal</h4>
+            <p>Privacy Policy</p>
+            <p>Terms of Use</p>
+        </div>
+        <div>
+            <h4>Follow Us</h4>
+            <p>Facebook</p>
+            <p>Instagram</p>
+            <p>LinkedIn</p>
+        </div>
+    </footer>
+
+    <script>
+        // Sticky Header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+    </script>
+</body>
+</html>
