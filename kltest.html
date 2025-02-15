@@ -138,7 +138,7 @@
             margin: 10px;
             border: none;
             border-radius: 5px;
-            background-color: #007BFF;
+            background-color: #c5a47e;
             color: white;
             cursor: pointer;
             text-decoration: none;
@@ -146,7 +146,7 @@
         }
 
         .cta-button:hover {
-            background-color: #0056b3;
+            background-color: #c5a47e;
 		z-index: 10001;
         }
     </style>
@@ -193,8 +193,73 @@
     </section>
     <section class="contactus">
         <h2>Contact Us</h2>
-		<img src="./whatsapp_gold.svg" alt="WhatsApp" width="20" style="vertical-align: middle; margin-right: 8px;">
-		<button style="background-color: #c5a47e; color: white; border: none; padding: 10px 20px; font-size: 16px; border-radius: 5px; cursor: pointer;" class="whatsapp_btn" onclick="'https://api.whatsapp.com/send/?phone=60142976513&text=I+would+like+to+know+more+about+KLCC+Projects'"; fbq('track', 'Contact');">Whatsapp</button>    
+		<img src="./whatsappOri.svg" alt="WhatsApp" width="20" style="vertical-align: middle; margin-right: 8px;">
+		<button style="background-color: #c5a47e; color: white; border: none; padding: 10px 20px; font-size: 16px; border-radius: 5px; cursor: pointer;" class="whatsapp_btn" onclick="'https://api.whatsapp.com/send/?phone=60142976513&text=I+would+like+to+know+more+about+KLCC+Projects'"; fbq('track', 'Contact');">Whatsapp</button>        
+</section>
+
+<section>
+    <!-- Contact Form Section -->
+    <section style="margin: 20px auto; max-width: 600px;">
+       
+	
+	<h2>Request CallBack</h2>
+        <form style="text-align: left; padding: 20px;" action="https://formspree.io/f/movjwwjl" method="POST">
+
+		
+            <div style="margin-bottom: 15px;">
+                <label for="name" style="display: block; margin-bottom: 5px;">Name:</label>
+                <input type="text" id="name" name="name" 
+                    style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;"
+                    required>
+            </div>
+            
+            <div style="margin-bottom: 15px;">
+                <label for="phone" style="display: block; margin-bottom: 5px;">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" 
+                    style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;"
+                    pattern="[0-9]{10,11}" 
+                    title="Please enter valid phone number" 
+                    required>
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <label for="purpose" style="display: block; margin-bottom: 5px;">Purpose:</label>
+                <select id="purpose" name="purpose" 
+                    style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;"
+                    required>
+                    <option value="">Select Purpose</option>
+                    <option value="investment">Investment</option>
+                    <option value="own-stay">Own Stay</option>
+                </select>
+            </div>
+	 <div style="margin-bottom: 20px;">
+                <label for="method" style="display: block; margin-bottom: 5px;">Method:</label>
+                <select id="method" name="method" 
+                    style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;"
+                    required>
+                    <option value="">Prefer Contact Method</option>
+                    <option value="investment">Call</option>
+                    <option value="own-stay">Whatsapp</option>
+                </select>
+            </div>
+		 <div style="margin-bottom: 20px;">
+                <label for="time" style="display: block; margin-bottom: 5px;">Time:</label>
+                <select id="time" name="time" 
+                    style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;"
+                    required>
+                    <option value="">Prefer Contact Time</option>
+                    <option value="investment">Morning (9am-11am)</option>
+                    <option value="own-stay">Afternoon (12pm-5pm)</option>
+			<option value="own-stay">Evening (6pm-10pm)</option>
+                </select>
+            </div>
+            
+            <button type="submit" class="cta-button" 
+                style="width: 100%; padding: 12px; font-size: 16px;"
+                onclick="fbq('track', 'Lead');">
+                Submit
+            </button>
+        </form>
     </section>
 
     <footer>
