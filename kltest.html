@@ -204,7 +204,9 @@
         };
 
 
-       
+         function directToChatbot() {
+            window.location.href = "https://api.whatsapp.com/send/?phone=60142976513&text=I+would+like+to+know+more+about+KLCC+Projects";
+        }
     </script>
 	<!-- Meta Pixel Code -->
 <script>
@@ -246,7 +248,7 @@
         </video>
         <div class="hero-content">
             <h1>Luxury Residences in the Heart of KLCC</h1>
-            <button class="cta-button" href="#end">Download Brochure</button>
+            <button class="cta-button" href="#end" onclick="toggleChatSection(); fbq('track', 'Schedule');">Download Brochure</button>
         </div>
     </section>
 
@@ -271,7 +273,7 @@
     <section class="contactus" style="flex: 1; background: #D4C6B1; padding: 20px; box-sizing: border-box;">
         <h2>Contact Us</h2>
         <img src="./whatsappOri.svg" alt="WhatsApp" width="20" style="vertical-align: middle; margin-right: 8px;">
-        <button style="background-color: #c5a47e; color: white; border: none; padding: 10px 20px; font-size: 16px; border-radius: 5px; cursor: pointer;" class="whatsapp_btn" onclick="'https://api.whatsapp.com/send/?phone=60142976513&text=I+would+like+to+know+more+about+KLCC+Projects'"; fbq('track', 'Contact');">Whatsapp</button>        
+        <button style="background-color: #c5a47e; color: white; border: none; padding: 10px 20px; font-size: 16px; border-radius: 5px; cursor: pointer;" class="whatsapp_btn" onclick="directToChatbot()"; fbq('track', 'Contact');">Whatsapp</button>        
     </section>
 
     <section class="callbackForm" style="flex: 1; padding: 20px; background-color: #f9f9f9; box-sizing: border-box;">
@@ -335,8 +337,7 @@
         </form>
     </section>
 </section>
-<div id="end">
-    </div>
+<div id="end"></div>
 <section id="chatdiv">
 	<div class="webchat" style="width: 100vw; height:100wh">
 	  <iframe id="chatbot" style="width:100%; border: none;"
@@ -354,8 +355,8 @@
 	  "botId": "5353b419-421e-4d14-b97b-35e5c7b9668e",
 	  "configuration": {
 	    "composerPlaceholder": "Ask me question on the project",
-	    "botName": "Nimo",
-	    "botDescription": "Im here to help answer your questions. Feel free to ask me more on the layout, location, size etc...",
+	    "botName": "Nimo - Chat Assistant",
+	    "botDescription": "Im here to help answer any of your questions. Feel free to ask me more on the brochure layout, location, size etc...",
 	    "website": {},
 	    "email": {
 	      "title": "bi.nimo.314@gmail.com",
