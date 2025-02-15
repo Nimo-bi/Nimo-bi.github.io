@@ -192,21 +192,16 @@
             </div>
         </div>
     </section>
-    <section class="contactus">
+    <<section class="contactus-callback-container" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; padding: 50px 0;">
+    <section class="contactus" style="flex: 1; background: #D4C6B1; padding: 20px; box-sizing: border-box;">
         <h2>Contact Us</h2>
-		<img src="./whatsappOri.svg" alt="WhatsApp" width="20" style="vertical-align: middle; margin-right: 8px;">
-		<button style="background-color: #c5a47e; color: white; border: none; padding: 10px 20px; font-size: 16px; border-radius: 5px; cursor: pointer;" class="whatsapp_btn" onclick="'https://api.whatsapp.com/send/?phone=60142976513&text=I+would+like+to+know+more+about+KLCC+Projects'"; fbq('track', 'Contact');">Whatsapp</button>        
-</section>
+        <img src="./whatsappOri.svg" alt="WhatsApp" width="20" style="vertical-align: middle; margin-right: 8px;">
+        <button style="background-color: #c5a47e; color: white; border: none; padding: 10px 20px; font-size: 16px; border-radius: 5px; cursor: pointer;" class="whatsapp_btn" onclick="'https://api.whatsapp.com/send/?phone=60142976513&text=I+would+like+to+know+more+about+KLCC+Projects'"; fbq('track', 'Contact');">Whatsapp</button>        
+    </section>
 
-<section>
-    <!-- Contact Form Section -->
-    <section style="margin: 20px auto; max-width: 600px;">
-       
-	
-	<h2>Request CallBack</h2>
+    <section class="callbackForm" style="flex: 1; padding: 20px; background-color: #f9f9f9; box-sizing: border-box;">
+        <h2>Request CallBack</h2>
         <form style="text-align: left; padding: 20px;" action="https://formspree.io/f/movjwwjl" method="POST">
-
-		
             <div style="margin-bottom: 15px;">
                 <label for="name" style="display: block; margin-bottom: 5px;">Name:</label>
                 <input type="text" id="name" name="name" 
@@ -233,7 +228,8 @@
                     <option value="own-stay">Own Stay</option>
                 </select>
             </div>
-	 <div style="margin-bottom: 20px;">
+            
+            <div style="margin-bottom: 20px;">
                 <label for="method" style="display: block; margin-bottom: 5px;">Method:</label>
                 <select id="method" name="method" 
                     style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;"
@@ -243,7 +239,8 @@
                     <option value="own-stay">Whatsapp</option>
                 </select>
             </div>
-		 <div style="margin-bottom: 20px;">
+            
+            <div style="margin-bottom: 20px;">
                 <label for="time" style="display: block; margin-bottom: 5px;">Time:</label>
                 <select id="time" name="time" 
                     style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;"
@@ -251,7 +248,7 @@
                     <option value="">Prefer Contact Time</option>
                     <option value="investment">Morning (9am-11am)</option>
                     <option value="own-stay">Afternoon (12pm-5pm)</option>
-			<option value="own-stay">Evening (6pm-10pm)</option>
+                    <option value="own-stay">Evening (6pm-10pm)</option>
                 </select>
             </div>
             
@@ -262,6 +259,7 @@
             </button>
         </form>
     </section>
+</section>
 
     <footer>
         <div>
