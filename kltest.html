@@ -321,10 +321,10 @@
             <button class="tab-button active" data-target="layoutA">Type A</button>
             <button class="tab-button" data-target="layoutA4">Type A4</button>
             <button class="tab-button" data-target="layoutB">Type B</button>
-	   <button class="tab-button active" data-target="layoutB1">Layout B1</button>
+	   <button class="tab-button active" data-target="layoutB1 view-layoutB1">Layout B1</button>
             <button class="tab-button" data-target="layoutC1">Layout C1</button>
             <button class="tab-button" data-target="layoutC2">Layout C2</button>
-	<button class="tab-button active" data-target="layoutC4">Layout C4</button>
+	<button class="tab-button active" data-target="layoutC4 view-layoutC4">Layout C4</button>
         </div>
 
         <div id="layoutA" class="floor-plan active">
@@ -360,8 +360,8 @@
     <!-- Virtual Show Unit Section -->
     <section class="virtual-show-unit" active>
         <h2>Virtual Show Unit</h2>
-	 <div id="layoutA3" class="vr-view active">
-            <iframe
+	 <div id="vr-layoutA3" class="vr-view active">
+        <iframe
         src="https://avisualiser.my/VR/KLCC/A3_V2/index.html"
         width="80%"
         height="500px"
@@ -371,8 +371,8 @@
         ></iframe>
         </div>
 
-        <div id="layoutB1" class="vr-view">
-                    <iframe
+        <div id="vr-layoutB1" class="vr-view">
+        <iframe
         src="https://avisualiser.my/VR/KLCC/B1_V2/index.html"
         width="80%"
         height="500px"
@@ -382,8 +382,8 @@
         ></iframe>
         </div>
 
-        <div id="layoutC4" class="vr-view">
-                      <iframe
+        <div id="vr-layoutC4" class="vr-view">
+        <iframe
         src="https://avisualiser.my/VR/KLCC/C4/index.html"
         width="80%"
         height="500px"
@@ -418,13 +418,18 @@
 
         tabButtons.forEach(button => {
             button.addEventListener('click', () => {
-                tabButtons.forEach(btn => btn.classList.remove('active'));
+		const targets = button.getAttribute('data-target').split(' ');
+		 tabButtons.forEach(btn => btn.classList.remove('active'));
                 floorPlans.forEach(plan => plan.classList.remove('active'));
 		vrView.forEach(view => view.classList.remove('active'));
-
-                button.classList.add('active');
-                const target = button.getAttribute('data-target');
-                document.getElementById(target).classList.add('active');
+		button.classList.add('active');
+		 targets.forEach(target => {
+	            const content = document.getElementById(target);
+	            if (content) {
+	                content.style.display = 'block';
+			content.classList.add('active');// Show the content
+	            }
+	        });
             });
         });
     </script>
