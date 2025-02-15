@@ -151,6 +151,30 @@
             background-color: #b0834f;
 		z-index: 10001;
         }
+		#chatbot {
+		width: 100vw; /* Default width for larger screens */
+   		height: 660px; /* Default height for larger screens */
+		padding-right: 20px;
+		/*position: fixed;*/
+		bottom: 10px;
+		z-index: 1000;
+		
+	}
+
+	#propertyMap {
+		aira-hidden: false;
+	}
+
+	/* Responsive styling for mobile devices */
+	@media screen and (max-width: 768px) {
+	    #chatbot {
+	        width: 90%; /* Adjust width to fit smaller screens */
+	        /*height: 20%; /* Adjust height to fit smaller screens */
+	        /*bottom: 20px; /* Reduce space from bottom */
+	        right: 5%; /* Center it horizontally */
+		font-size: large;
+	    }
+	}
     </style>
 	 <script>
 	window.onload = () => {
@@ -310,7 +334,57 @@
         </form>
     </section>
 </section>
-
+<section id="chatdiv">
+	<div class="webchat" style="width: 100vw; height:100wh">
+	  <iframe id="chatbot" style="width:100%; border: none;"
+	    srcdoc='
+	    <!doctype html>
+	    <html lang="en">
+	      <body>
+		  <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+		  <script defer>
+	          window.botpress.on("webchat:ready", (conversationId) => {
+	            botpress.open();
+	          });
+	          <!-- REPLACE THE CONTENT BELOW WITH THE JAVASCRIPT CODE YOU COPIED EARILER -->
+	window.botpress.init({
+	  "botId": "5353b419-421e-4d14-b97b-35e5c7b9668e",
+	  "configuration": {
+	    "composerPlaceholder": "Ask me question on the project",
+	    "botName": "Nimo",
+	    "botDescription": "Im here to help answer your questions. Feel free to ask me more on the layout, location, size etc...",
+	    "website": {},
+	    "email": {
+	      "title": "bi.nimo.314@gmail.com",
+	      "link": "bi.nimo.314@gmail.com"
+	    },
+	    "phone": {
+	      "title": "+60142976513",
+	      "link": "+60142976513"
+	    },
+	    "termsOfService": {},
+	    "privacyPolicy": {},
+	    "color": "#3B82F6",
+	    "variant": "solid",
+	    "themeMode": "light",
+	    "fontFamily": "inter",
+	    "radius": 1,
+	    "allowFileUpload": false
+	  },
+	  "clientId": "733c60e1-1055-40f4-9ba4-583b01e3b2d9"
+	});
+	          <!-- REPLACE THE CONTENT ABOVE -->
+	        </script>
+		<style>
+		  .bpWebchat {
+		  	width: 97vw;
+		  }
+		</style>
+	      </body>
+	    </html>'
+	  ></iframe>
+	</div>
+</section>
   <div id="end">
     </div>
 
